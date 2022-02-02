@@ -1,0 +1,16 @@
+.my-caption{
+    background: rgba(0,0,0,.3);
+    bottom: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.h-200{ height: 200px; }
+.h-300{ height: 300px; }
+.h-250{height: 250px;}
+.h-50{ height: 50px; }
+.h-600{ height: 600px; }
+.h-160{height: 160px;}
+
+.p-size{
+    font-size: 13px;
+}
