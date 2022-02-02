@@ -37,7 +37,18 @@ class Series
     {
         if($this->startingNumber > $this->endingNumber)
         {
-            return $this->bigToSmallSeries();
+            if ($this->oddEven == 'odd')
+            {
+                return $this->bigToSmallOddSeries();
+
+            }
+            elseif ($this->oddEven == 'even')
+            {
+                return $this->bigToSmallEvenSeries();
+            }
+            else {
+                return $this->bigToSmallSeries();
+            }
         }
         else
         {
@@ -81,6 +92,32 @@ class Series
             }
 
 //          ********** if (.=)concrete sign not given then value will be replaced with the last number assigned *****
+        }
+        return $this->result;
+    }
+    protected function bigToSmallOddSeries()
+    {
+        for ($this->i = $this->startingNumber; $this->i >= $this->endingNumber; $this->i--)
+        {
+            if ($this->i % 2 !=0)
+            {
+                $this->result .= $this->i.' ';
+                //********** if (.=)concrete sign not given then value will be replaced with the last number assigned *****
+            }
+
+        }
+        return $this->result;
+    }
+    protected function bigToSmallEvenSeries()
+    {
+        for ($this->i = $this->startingNumber; $this->i >= $this->endingNumber; $this->i--)
+        {
+            if ($this->i % 2 == 0)
+            {
+                $this->result .= $this->i.' ';
+                //********** if (.=)concrete sign not given then value will be replaced with the last number assigned *****
+            }
+
         }
         return $this->result;
     }
